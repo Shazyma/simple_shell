@@ -1,7 +1,8 @@
 #include "shell.h"
 
 /**
- * execute_instruct - creates process id
+ * execute_instruct - creates process idi
+ * @instruct: value of command
  * Return: Always 0
  */
 void execute_instruct(const char *instruct)
@@ -18,6 +19,7 @@ void execute_instruct(const char *instruct)
 		char *args[128];
 		int arg_count = 0;
 		char *token = strtok((char *)instruct, " ");
+
 		while (token != NULL)
 		{
 			args[arg_count++] = token;
@@ -25,6 +27,7 @@ void execute_instruct(const char *instruct)
 		}
 		args[arg_count] = NULL;
 		execvp(args[0], args);
+
 		group_print(" Error executing command.\n");
 		exit(EXIT_FAILURE);
 	}

@@ -1,4 +1,9 @@
 #include "shell.h"
+/**
+ * read_instruct - Gathers input
+ * @instruct: value of input
+ * @sz: size of characters
+ */
 
 void read_instruct(char *instruct, size_t sz)
 {
