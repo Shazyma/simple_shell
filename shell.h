@@ -5,6 +5,7 @@
 #include <stdlib.h>
 #include <unistd.h>
 #include <string.h>
+#include <sys/wait.h>
 
 void group_print(const char *s);
 void execute_instruct(const char *instruct);
